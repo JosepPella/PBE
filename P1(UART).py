@@ -8,8 +8,6 @@ class Rfid:
         self.pn532 = PN532_UART(self.uart)
 
     def read_uid(self):
-        self.pn532.SAM_configuration()
-
         while True:
             uid = self.pn532.read_passive_target(timeout=0.5)
             if uid is not None:

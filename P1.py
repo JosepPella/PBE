@@ -11,7 +11,7 @@ class Rfid:
         while True:
             uid = self.pn532.read_passive_target(timeout=0.5)
             if uid is not None:
-                return ''.join(format(x, '02x') for x in uid)
+                return ''.join(format(x, '02x') for x in uid).upper()
 
 if __name__ == "__main__":
     rf = Rfid()

@@ -25,13 +25,13 @@ class NFCWindow(Gtk.Window):
 		
 		#Button
 		self.button = Gtk.Button(label="Clear")
-		self.button.connect("clicked", self.clicked) 
+		self.button.connect("clicked", self.click_button) 
 		self.box.pack_start(self.button, True, True, 0)
 		
 		self.ini_thread()
 
 	#Press buton => reestart scan thread and change evBox and label
-	def clicked(self, widget):
+	def click_button(self, widget):
 		self.label.set_label('<span foreground="white" size="x-large">Please, login with your university card</span>')
 		self.evbox.override_background_color(0, Gdk.RGBA(0,0,8,1))
 		self.ini_thread()

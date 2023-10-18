@@ -20,7 +20,6 @@ class NFCWindow(Gtk.Window):
 		#Label
 		self.label = Gtk.Label('<span foreground="white" size="x-large">Please, login with your university card</span>')
 		self.label.set_use_markup(True)
-		self.label.set_name("Bluelabel")
 		self.label.set_size_request(500,100)
 		self.evbox.add(self.label)
 		
